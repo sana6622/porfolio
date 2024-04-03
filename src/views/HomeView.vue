@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <h1>Hello, This is Home Page. 試了好幾次終於成功了</h1>
+  <div id="home">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -18,86 +18,196 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <RouterLink to="/about">About</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <RouterLink to="/">Home</RouterLink>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
+    <div class="particles">
+      <vue-particles
+            id="tsparticles"
+            class="tsparticles"
+            :particlesLoaded="particlesLoaded"
+            :options="options"
+        />
+    </div>
+    <div class="banner">
+      <div class="banner-text">
+        <h1>前端工程師-許雅棠</h1>
+        <h2>在代碼的世界裡不斷成長，追求技術上的卓越。</h2>
+        <h2>我的旅程才剛開始，一起來探索更多可能！</h2>
+      </div>
+    </div>
+    <!--end of banner-->
+    <main>
+      <div class="main-experience">
+      <h3>工作經歷</h3>
+      <div class="exp-list">
+        <div class="list-time"></div>
+        <div class="list-main">
+          <h4>工司</h4>
+          <h5>職位</h5>
+          <ul>
+            <li>des</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-project">
+      <h3>專案</h3>
+    </div>
+    </main>
 
-    <ul class="nav justify-content-center">
-      <li class="nav-item"><RouterLink to="/">Home</RouterLink> |</li>
-      <li class="nav-item">
-        <RouterLink to="/about">About</RouterLink>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-
-    <button type="button" class="btn btn-link">Link</button>
-    <hr />
-    <HelloWorld />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+// import { loadFull } from 'tsparticles'
 
 export default {
-  components: {
-    HelloWorld
+  components: {},
+  data () {
+    return {
+      particlesLoaded: async (container) => {
+        console.log('particles contaainer loaded', container)
+      },
+      options: {
+        background: {
+          color: {
+            // value: '#6d6daa'
+          }
+        },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: {
+              enable: true,
+              mode: 'push'
+            },
+            onHover: {
+              enable: true,
+              mode: 'repulse'
+            }
+          },
+          modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 40
+            },
+            push: {
+              quantity: 4
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4
+            }
+          }
+        },
+        particles: {
+          color: {
+            value: '#6d6daa'
+          },
+          links: {
+            color: '#6d6daa',
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1
+          },
+          move: {
+            direction: 'none',
+            enable: true,
+            outModes: 'bounce',
+            random: false,
+            speed: 4,
+            straight: false
+          },
+          number: {
+            density: {
+              enable: true
+            },
+            value: 80
+          },
+          opacity: {
+            value: 0.5
+          },
+          shape: {
+            type: 'circle'
+          },
+          size: {
+            value: { min: 1, max: 5 }
+          }
+        },
+        detectRetina: true
+
+      },
+      expData: [
+        {
+          start: '2022/11',
+          end: '2024/03',
+          company: '飛達智能股份有限公司',
+          title: '前端工程師',
+          des: ['使用Vue2 & TypeScript對既有的前後台系統的進行維護及新需求的開發。',
+            '使用Vue3 & TypeScript對商城專案做前台網頁進行 RWD 網頁開發。',
+            '開發打卡系統開發，在前端部分負責後台畫面切版與API串接，在後端部分使用 Java Spring 框架中實現 CRUD功能，並用Swagger 進行 API 文檔撰寫。',
+            '報價單系統開發，在前端部分負責開發報價單前台頁面功能做RWD切版並串接API，在後端部分使用Node.js 及 Express.js 運用既有程式碼處理報價單資料及PDF預覽畫面',
+            '協同 UI 設計師評估新專案功能且初步規劃商城後台資料庫，並繪製ERD圖。']
+        },
+        {
+          start: '2022/03',
+          end: '2016/07',
+          company: '新光醫療財團法人新光吳火獅紀念醫院',
+          title: '專員',
+          des: ['在經營分析組，主要做營運分析與專案分析報告，以提供上級做未來方針的規畫。',
+            '在財務課，主要負責銀行往來帳務編列、支付作業、資金調度運用、出納作業。',
+            '曾主動提出多項改善方案，將數個原本需要花費1~3小時的工作，透過分析歸納後，進行修改並套用各種excel函式，降低到5-10分內即可完成工作，並分享給同仁們使用大幅提升工作效率。'
+          ]
+        },
+        {
+          start: '2016/05',
+          end: '2015/10',
+          company: '邰港科技',
+          title: '行政助理',
+          des: ['對內需要跟各部門協調專案的執行與追蹤、處理單位內人事相關資料核算',
+            '對外跟廠商洽談工程進行及原物料採購、客戶溝通協調，並規畫安排施工及出貨時程']
+        },
+        {
+          start: '2015/10',
+          end: '2014/01',
+          company: '辰耀運通有限公司',
+          title: '會計',
+          des: ['負責帳務處理、收款、開立支票及發票', '現金出納並登記現金交易事項']
+        },
+        {
+          start: '2013/04',
+          end: '2007/07',
+          company: '財團法人劉羅柳氏文教基金會',
+          title: '秘書助理/會計',
+          des: ['工讀生時期(4年):主要處理獎學金相關事宜',
+            '正職:撰寫公文及公文收發、帳務處理、編列財報，員工薪酬計算與發放、勞健保、勞退提繳相關業務']
+        }
+
+      ]
+
+    }
+  },
+  mounted () {
+    // const particlesInit = async (engine) => {
+    //   await loadFull(engine)
+    // }
+    // const particlesLoaded = async (container) => {
+    //   console.log('particles contaainer loaded', container)
+    // }
   }
 }
 </script>
 
-<style scoped></style>
+<style>
+@import "../style/HomeView.scss";
+</style>

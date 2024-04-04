@@ -68,8 +68,22 @@
       </li>
       </ul>
     </div>
-    <div class="main-project text-container">
-      <h3>專案</h3>
+    <div class="main-skill text-container">
+      <div class="skill-content">
+        <h3>專業技能及經驗</h3>
+        <ul class="content-list">
+          <li class="list-box" v-for="(skillItem,skillIndex) in skillData" :key="`skillItem-${skillIndex}`">
+              <h4>{{ skillItem.title }} <span>{{ skillItem?.familiar }}</span></h4>
+              <ul>
+                <li v-for="(skill,skillIndex) in skillItem.skills" :key="`skill-${skillIndex}`">{{ skill }}</li>
+              </ul>
+              <ul>
+                <li v-for="(des,desIndex) in skillItem.des" :key="`skillDes-${desIndex}`">{{ des }}</li>
+              </ul>
+
+          </li>
+        </ul>
+      </div>
     </div>
     </main>
 
@@ -79,6 +93,7 @@
 <script>
 // import { loadFull } from 'tsparticles'
 import experience from '../config/experience.json'
+import skillData from '../config/skill.json'
 import { RiBuilding4Fill, RiBriefcase4Line } from '@remixicon/vue'
 
 export default {
@@ -163,7 +178,8 @@ export default {
         detectRetina: true
 
       },
-      expData: experience
+      expData: experience,
+      skillData
 
     }
   },

@@ -1,0 +1,1 @@
+import{g as s,h as n,f as o,w as a,m as e,F as r,j as c,k as u,o as _}from"./index-0yMAd5hB.js";const i={},l=c("h1",null,"This is About page.",-1);function p(d,f,m,h,k,x){const t=u("RouterLink");return _(),n(r,null,[l,o(t,{to:"/"},{default:a(()=>[e("Home")]),_:1}),e(" | "),o(t,{to:"/about"},{default:a(()=>[e("About")]),_:1})],64)}const V=s(i,[["render",p]]);export{V as default};

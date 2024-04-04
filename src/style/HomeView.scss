@@ -20,15 +20,11 @@
         background-size: cover;
         background-repeat: no-repeat;
 
-
         .banner-text {
             position: relative;
             z-index: 2;
             color: white
         }
-
-
-
     }
 
     .banner::after {
@@ -44,16 +40,137 @@
     }
 
     .main-experience {
+        z-index: 2;
 
-        outline: 3px solid blue;
-        height: 300px;
-        z-index: 10;
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .exp-data {
+            background-color: #fff;
+            box-shadow: -3px 2px 14px -6px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-top: 32px;
+            padding: 20px;
+
+            .data-time {
+                padding: 0px 20px 20px 0px;
+                font-size: 18px;
+                font-weight: 600;
+                border-right: 3px solid #ffc000;
+
+                :nth-child(1) {
+                    position: relative;
+                    margin-bottom: 20px;
+                }
+
+                :nth-child(1)::after {
+                    content: "~";
+                    position: absolute;
+                    top: 24px;
+                    left: 45%;
+                    transform: rotate(90deg);
+                }
+            }
+
+            .data-main {
+                flex: 1;
+                padding: 0 0 0 30px;
+                display: grid;
+                grid-template-columns: 70% 30%;
+                grid-template-rows: repeat(2, minmax(40px, auto));
+                grid-template-areas: "h4 h5" "ul ul";
+
+                h4 {
+                    grid-area: h4;
+                    font-size: 26px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                h5 {
+                    grid-area: h5;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-weight: 600;
+                }
+
+                ul {
+                    grid-area: ul;
+
+                    li {
+                        list-style-type: disc;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .exp-data {
+                flex-direction: column;
+
+                .data-time {
+                    display: flex;
+                    border-right: 0;
+
+                    padding: 0 10px 0 10px;
+
+                    :nth-child(1) {
+                        padding-right: 30px;
+                    }
+
+                    :nth-child(1)::after {
+                        top: 0;
+                        left: 80px;
+                        transform: rotate(0deg);
+                    }
+                }
+
+                .data-main {
+                    outline: 1px solid red;
+                    // background-color: pink;
+
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(3, minmax(40px, auto));
+                    grid-template-areas: "h4" "h5" "ul";
+                    // display: flex;
+                    // flex-direction: column;
+
+                }
+            }
+
+
+
+        }
 
     }
 
     .main-project {
         height: 300px;
         background-color: pink;
+    }
+
+    .text-container {
+
+        padding-right: 100px;
+        padding-left: 100px;
+
+
+        @media screen and (max-width: 992px) {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+
     }
 
 

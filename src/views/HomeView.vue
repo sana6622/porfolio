@@ -44,20 +44,31 @@
     </div>
     <!--end of banner-->
     <main>
-      <div class="main-experience">
+      <div class="main-experience text-container">
       <h3>工作經歷</h3>
-      <div class="exp-list">
-        <div class="list-time"></div>
-        <div class="list-main">
-          <h4>工司</h4>
-          <h5>職位</h5>
+      <ul class="exp-list">
+        <li class="exp-data" v-for="(item,index) in expData" :key="`exp-${index}`">
+        <div class="data-time">
+          <p>{{ item.start }}</p>
+          <p>{{ item.end }}</p>
+        </div>
+        <div class="data-main">
+          <h4>
+            <RiBuilding4Fill color="#D6AE88" size="20px"></RiBuilding4Fill>
+            {{ item.company }}
+          </h4>
+          <h5>
+            <RiBriefcase4Line color="#D6AE88" size="20px"></RiBriefcase4Line>
+            {{ item.title }}
+          </h5>
           <ul>
-            <li>des</li>
+            <li v-for="(desItem,desIndex) in item.des" :key="`des-${desIndex}`">{{ desItem }}</li>
           </ul>
         </div>
-      </div>
+      </li>
+      </ul>
     </div>
-    <div class="main-project">
+    <div class="main-project text-container">
       <h3>專案</h3>
     </div>
     </main>
@@ -67,9 +78,14 @@
 
 <script>
 // import { loadFull } from 'tsparticles'
+import experience from '../config/experience.json'
+import { RiBuilding4Fill, RiBriefcase4Line } from '@remixicon/vue'
 
 export default {
-  components: {},
+  components: {
+    RiBuilding4Fill,
+    RiBriefcase4Line
+  },
   data () {
     return {
       particlesLoaded: async (container) => {
@@ -147,53 +163,7 @@ export default {
         detectRetina: true
 
       },
-      expData: [
-        {
-          start: '2022/11',
-          end: '2024/03',
-          company: '飛達智能股份有限公司',
-          title: '前端工程師',
-          des: ['使用Vue2 & TypeScript對既有的前後台系統的進行維護及新需求的開發。',
-            '使用Vue3 & TypeScript對商城專案做前台網頁進行 RWD 網頁開發。',
-            '開發打卡系統開發，在前端部分負責後台畫面切版與API串接，在後端部分使用 Java Spring 框架中實現 CRUD功能，並用Swagger 進行 API 文檔撰寫。',
-            '報價單系統開發，在前端部分負責開發報價單前台頁面功能做RWD切版並串接API，在後端部分使用Node.js 及 Express.js 運用既有程式碼處理報價單資料及PDF預覽畫面',
-            '協同 UI 設計師評估新專案功能且初步規劃商城後台資料庫，並繪製ERD圖。']
-        },
-        {
-          start: '2022/03',
-          end: '2016/07',
-          company: '新光醫療財團法人新光吳火獅紀念醫院',
-          title: '專員',
-          des: ['在經營分析組，主要做營運分析與專案分析報告，以提供上級做未來方針的規畫。',
-            '在財務課，主要負責銀行往來帳務編列、支付作業、資金調度運用、出納作業。',
-            '曾主動提出多項改善方案，將數個原本需要花費1~3小時的工作，透過分析歸納後，進行修改並套用各種excel函式，降低到5-10分內即可完成工作，並分享給同仁們使用大幅提升工作效率。'
-          ]
-        },
-        {
-          start: '2016/05',
-          end: '2015/10',
-          company: '邰港科技',
-          title: '行政助理',
-          des: ['對內需要跟各部門協調專案的執行與追蹤、處理單位內人事相關資料核算',
-            '對外跟廠商洽談工程進行及原物料採購、客戶溝通協調，並規畫安排施工及出貨時程']
-        },
-        {
-          start: '2015/10',
-          end: '2014/01',
-          company: '辰耀運通有限公司',
-          title: '會計',
-          des: ['負責帳務處理、收款、開立支票及發票', '現金出納並登記現金交易事項']
-        },
-        {
-          start: '2013/04',
-          end: '2007/07',
-          company: '財團法人劉羅柳氏文教基金會',
-          title: '秘書助理/會計',
-          des: ['工讀生時期(4年):主要處理獎學金相關事宜',
-            '正職:撰寫公文及公文收發、帳務處理、編列財報，員工薪酬計算與發放、勞健保、勞退提繳相關業務']
-        }
-
-      ]
+      expData: experience
 
     }
   },

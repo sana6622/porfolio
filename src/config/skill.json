@@ -2,29 +2,19 @@
   {
     "title": "Front-End",
     "familiar": "",
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Vue2",
-      "Vue3",
-      "Pinia",
-      "TypeScript",
-      "Bootstrap",
-      "SCSS"
-    ],
+    "skills": ["Vue2", "Vue3", "Pinia", "TypeScript", "Bootstrap", "SCSS"],
     "des": [
-      "善用HTML 語意化標籤",
+      "善用 HTML 語意化標籤",
       "了解Vue.js 與 Pinia",
-      "善用Vue模板語法提高切版、渲染效率",
+      "善用 Vue 模板語法提高切版、渲染效率",
       "熟悉 RESTful API，具備 API 串接經驗",
-      "善用Bootstrap 和SCSS ,製作優良的響應式設計 "
+      "善用 Bootstrap 和 SCSS，製作優良的響應式設計 "
     ]
   },
   {
     "title": "Version Control",
     "familiar": "",
-    "skills": ["Git"],
+    "skills": ["Git", "GitHub", "GitLab"],
     "des": ["使用Git進行版本控制", "多人協作開發經驗"]
   },
   {
@@ -37,12 +27,12 @@
     "title": "Database",
     "familiar": "初學",
     "skills": ["MySQL"],
-    "des": ["建立、刪除、修改MySQL 資料表", "進行表單的合併、篩選與查詢"]
+    "des": ["建立、刪除、修改 MySQL 資料表", "進行表單的合併、篩選與查詢"]
   },
   {
     "title": "Tools",
     "familiar": "",
     "skills": ["Cygwin"],
-    "des": ["使用Cygwin進行命令操作"]
+    "des": ["使用 Cygwin 進行命令操作"]
   }
 ]

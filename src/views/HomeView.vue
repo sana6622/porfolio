@@ -70,14 +70,14 @@
     </div>
     <div class="main-skill text-container">
       <div class="skill-content">
-        <h3>專業技能及經驗</h3>
+        <h3>專業技能</h3>
         <ul class="content-list">
-          <li class="list-box" v-for="(skillItem,skillIndex) in skillData" :key="`skillItem-${skillIndex}`">
+          <li class="list-card" v-for="(skillItem,skillIndex) in skillData" :key="`skillItem-${skillIndex}`">
               <h4>{{ skillItem.title }} <span>{{ skillItem?.familiar }}</span></h4>
-              <ul>
+              <ul class="card-skill">
                 <li v-for="(skill,skillIndex) in skillItem.skills" :key="`skill-${skillIndex}`">{{ skill }}</li>
               </ul>
-              <ul>
+              <ul class="card-des">
                 <li v-for="(des,desIndex) in skillItem.des" :key="`skillDes-${desIndex}`">{{ des }}</li>
               </ul>
 

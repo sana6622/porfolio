@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -29,11 +28,11 @@
     </nav>
     <div class="particles">
       <vue-particles
-            id="tsparticles"
-            class="tsparticles"
-            :particlesLoaded="particlesLoaded"
-            :options="options"
-        />
+        id="tsparticles"
+        class="tsparticles"
+        :particlesLoaded="particlesLoaded"
+        :options="options"
+      />
     </div>
     <div class="banner">
       <div class="banner-text">
@@ -45,48 +44,91 @@
     <!--end of banner-->
     <main>
       <div class="main-experience text-container">
-      <h3>工作經歷</h3>
-      <ul class="exp-list">
-        <li class="exp-data" v-for="(item,index) in expData" :key="`exp-${index}`">
-        <div class="data-time">
-          <p>{{ item.start }}</p>
-          <p>{{ item.end }}</p>
-        </div>
-        <div class="data-main">
-          <h4>
-            <RiBuilding4Fill color="#D6AE88" size="20px"></RiBuilding4Fill>
-            {{ item.company }}
-          </h4>
-          <h5>
-            <RiBriefcase4Line color="#D6AE88" size="20px"></RiBriefcase4Line>
-            {{ item.title }}
-          </h5>
-          <ul>
-            <li v-for="(desItem,desIndex) in item.des" :key="`des-${desIndex}`">{{ desItem }}</li>
-          </ul>
-        </div>
-      </li>
-      </ul>
-    </div>
-    <div class="main-skill text-container">
-      <div class="skill-content">
-        <h3>專業技能</h3>
-        <ul class="content-list">
-          <li class="list-card" v-for="(skillItem,skillIndex) in skillData" :key="`skillItem-${skillIndex}`">
-              <h4>{{ skillItem.title }} <span>{{ skillItem?.familiar }}</span></h4>
-              <ul class="card-skill">
-                <li v-for="(skill,skillIndex) in skillItem.skills" :key="`skill-${skillIndex}`">{{ skill }}</li>
+        <h3>工作經歷</h3>
+        <ul class="exp-list">
+          <li
+            class="exp-data"
+            v-for="(item, index) in expData"
+            :key="`exp-${index}`"
+          >
+            <div class="data-time">
+              <p>{{ item.start }}</p>
+              <p>{{ item.end }}</p>
+            </div>
+            <div class="data-main">
+              <h4>
+                <RiBuilding4Fill color="#D6AE88" size="20px"></RiBuilding4Fill>
+                {{ item.company }}
+              </h4>
+              <h5>
+                <RiBriefcase4Line
+                  color="#D6AE88"
+                  size="20px"
+                ></RiBriefcase4Line>
+                {{ item.title }}
+              </h5>
+              <ul>
+                <li
+                  v-for="(desItem, desIndex) in item.des"
+                  :key="`des-${desIndex}`"
+                >
+                  {{ desItem }}
+                </li>
               </ul>
-              <ul class="card-des">
-                <li v-for="(des,desIndex) in skillItem.des" :key="`skillDes-${desIndex}`">{{ des }}</li>
-              </ul>
-
+            </div>
           </li>
         </ul>
       </div>
-    </div>
+      <div class="main-skill text-container">
+        <div class="skill-content">
+          <h3>專業技能</h3>
+          <ul class="content-list">
+            <li
+              class="list-card"
+              v-for="(skillItem, skillIndex) in skillData"
+              :key="`skillItem-${skillIndex}`"
+            >
+              <h4>
+                {{ skillItem.title }} <span>{{ skillItem?.familiar }}</span>
+              </h4>
+              <ul class="card-skill">
+                <li
+                  v-for="(skill, skillIndex) in skillItem.skills"
+                  :key="`skill-${skillIndex}`"
+                >
+                  {{ skill }}
+                </li>
+              </ul>
+              <ul class="card-des">
+                <li
+                  v-for="(des, desIndex) in skillItem.des"
+                  :key="`skillDes-${desIndex}`"
+                >
+                  {{ des }}
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-project text-container">
+        <h3>作品集</h3>
+        <ul>
+          <li class="card" v-for="project in projectData" :key="project.id">
+            <div class="card-img">
+              <img :src="project.imgURL" :alt="`${project.title}-圖片`" />
+            </div>
+            <div class="card-contents">
+              <div class="card-header">
+                <h5>{{ project.title }}</h5>
+                <span>{{ project.time }}</span>
+              </div>
+              <p>1231231231231231231231231231231231</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </main>
-
   </div>
 </template>
 
@@ -94,6 +136,7 @@
 // import { loadFull } from 'tsparticles'
 import experience from '../config/experience.json'
 import skillData from '../config/skill.json'
+import projectData from '../config/project.json'
 import { RiBuilding4Fill, RiBriefcase4Line } from '@remixicon/vue'
 
 export default {
@@ -176,11 +219,10 @@ export default {
           }
         },
         detectRetina: true
-
       },
       expData: experience,
-      skillData
-
+      skillData,
+      projectData
     }
   },
   mounted () {

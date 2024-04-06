@@ -1,0 +1,296 @@
+[
+  {
+    "id": 202404001,
+    "title": "履歷",
+    "time": "2024/04",
+    "category": "專案",
+    "type": "個人",
+    "imgURL": "https://github.com/sana6622/image-repository/blob/main/porfolio/fun-drink.png?raw=true",
+    "GitHub Page": "https://sana6622.github.io/porfolio/#/",
+    "GitHub": "https://github.com/sana6622/porfolio",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["Vue3", "Vite", "Bootstrap", "SCSS"],
+        "des": [
+          "利用 Vue 3 搭配 Vite 進行前端開發",
+          "採用SCSS預處理器",
+          "搭配使用Bootstrap 開發"
+        ]
+      },
+      {
+        "subTitle": "其他套件",
+        "skill": ["SweetAlert", "REMIX ICON", "tsParticles"],
+        "des": [
+          "使用SweetAlert進行美觀的彈窗提醒和確認消息，提升用戶互動體驗，使應用的提示和警告更加直觀和用戶友好。",
+          "使用REMIX ICON圖標套件，引入Icon",
+          "使用tsParticles實現複雜的粒子效果，用於畫面背景以增強網頁的視覺效果。"
+        ]
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "利用 Vue 3 搭配 Vite 進行專案開發，使用tsParticles增強網頁的視覺效果"
+        ]
+      },
+      {
+        "subTitle": "專案描述",
+        "des": [
+          "這個專案是一個以 Vue3 和 Vite 為基礎構建的個人履歷展示網站。並使用了 ESLint 確保程式碼品質。此專案目的在於提供一個簡潔明了的平台，來展示我的職涯經歷、技能以及我過去參與的專案。"
+        ]
+      },
+      {
+        "subTitle": "內容",
+        "des": [
+          "經歷部分：簡潔列出了我的工作經歷，包括曾任職的公司、職位和工作職責，以及我在各個職位上的主要成就。",
+          "技能展示：呈現了我掌握的技能，如前端開發、後端技術、數據庫管理和其他相關的技術能力。",
+          "專案作品：展示了我製作的專案或小作品，對於每個專案都有詳細的介紹，包括使用的技術工具及專案成果。"
+        ]
+      }
+    ],
+    "other": []
+  },
+
+  {
+    "id": 202403001,
+    "title": "Fun-Drink",
+    "time": "2024/03",
+    "category": "專案",
+    "type": "個人",
+    "imgURL": "https://github.com/sana6622/image-repository/blob/main/porfolio/fun-drink.png?raw=true",
+    "GitHub Page": "https://sana6622.github.io/fun-drink/#/",
+    "GitHub": "https://github.com/sana6622/fun-drink",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["Vue3", "Vite", "Pinia", "Bootstrap", "SCSS"],
+        "des": [
+          "利用 Vue 3 搭配 Vite 進行前端開發，使用 Pinia 作為狀態管理。",
+          "採用SCSS預處理器",
+          "搭配使用Bootstrap開發，並修改Bootstrap顏色，以符合專案色彩規劃。"
+        ]
+      },
+      {
+        "subTitle": "其他套件",
+        "skill": ["SweetAlert", "Swiper", "REMIX ICON", "tsParticles"],
+        "des": [
+          "使用SweetAlert進行美觀的彈窗提醒和確認消息，提升用戶互動體驗，使應用的提示和警告更加直觀和用戶友好。",
+          "Swiper作輪播功能，提供靈活的觸控滑動功能，增強用戶界面的動態展示。",
+          "使用REMIX ICON圖標套件，引入Icon",
+          "使用tsParticles實現複雜的粒子效果，用於登入畫面背景，以增強網頁的視覺效果。"
+        ]
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "利用 Vue 3 搭配 Vite 進行專案開發，透過 Whimsical 製作初步線稿圖和網站地圖，用於初期設計和規劃。「首頁」設計稿由專業設計師設計，依據設計稿做出進行開發與RWD的規劃。其他頁面則是自行規劃RWD與開發"
+        ]
+      },
+      {
+        "subTitle": "專案描述",
+        "des": [
+          "在 Fun Drink 這個專案為管理者提供完整的產品和訂單管理功能，同時為顧客提供個性化調配飲品的購物體驗。"
+        ]
+      },
+      {
+        "subTitle": "管理者功能",
+        "des": [
+          "產品資料的新增、更新和刪除功能，使管理者能夠輕鬆維護產品目錄。",
+          "開發查看和刪除訂單的功能，並允許修改訂單中的購買者資訊，以增強訂單管理的靈活性。"
+        ]
+      },
+      {
+        "subTitle": "消費者功能",
+        "des": [
+          "按分類查看產品的功能:讓顧客可以根據喜好瀏覽飲品和食材。",
+          "產品詳情頁面:使顧客能夠了解到產品的完整信息。",
+          "DIY調配飲品:顧客可以依據喜好自行調整基底飲比例、配料比例選擇、甜度調整，並可以即時顯示價格，為顧客提供個性化體驗，顧客完成調配後可加入購物車。",
+          "實現了購物車功能，包括產品數量調整、刪除和結帳流程。"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "subTitle": "初步線搞圖",
+        "link": "https://whimsical.com/fun-drink-BLgvVSeJWpqNoKW4r6XnnE"
+      },
+      {
+        "subTitle": "網站地圖",
+        "link": "https://whimsical.com/fun-drink-HPL5vnP7UAGurtapzdya7c"
+      },
+      {
+        "subTitle": "設計稿（設計師繪製）",
+        "link": "https://www.figma.com/file/C9C5vVgJlaRqISwwKzVV0M/%2316-%E7%8E%A9%E9%A3%B2%E6%96%99?type=design&node-id=0-1&mode=design&t=rZkkYE4LsrJX9D9X-0"
+      }
+    ]
+  },
+  {
+    "id": 202211001,
+    "title": "模仿「師虎來了」官網首頁",
+    "time": "2022/11",
+    "category": "切版",
+    "type": "個人",
+    "imgURL": "https://github.com/sana6622/image-repository/blob/main/porfolio/demo-tiger.png?raw=true",
+    "GitHub Page": "https://sana6622.github.io/demo-tiger/",
+    "GitHub": "https://github.com/sana6622/demo-tiger",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["HTML", "CSS", "JavaScript", "SCSS"],
+        "des": []
+      },
+      {
+        "subTitle": "其他套件",
+        "skill": ["Swiper", "AOS"],
+        "des": [
+          "Swiper作輪播功能，提供靈活的觸控滑動功能，增強用戶界面的動態展示。",
+          "通過 AOS（Animate On Scroll）套件，我為網站添加了引人注目的視差滾動效果，進一步提升了用戶體驗和視覺吸引力。"
+        ]
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "本專案是對「師虎來了」官網首頁的部分區域進行模仿復刻。在沒有原始設計稿的情況下，我分析了官網的結構和設計元素，從零開始進行手工切版，以達到與原網頁相近的視覺效果。使用 SASS 進行 CSS 管理，讓樣式的開發更加模組化和可維護。我還實現了響應式網頁設計（RWD），確保這個網頁在不同設備和屏幕尺寸上都能提供良好的瀏覽體驗。"
+        ]
+      },
+      {
+        "subTitle": "更動",
+        "des": [
+          "在輪播圖片區塊，僅下載官網照片配合自行設計簡易類似的版面作為輪播圖片。",
+          "我在此專案中放入自己的發想，思考在不改變原本官網的架構下，修改部分區塊並加入動態效果，使得頁面更加生動活潑。"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "subTitle": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": 202208001,
+    "title": "模仿「91APP」官網首頁",
+    "time": "2022/08",
+    "category": "切版",
+    "type": "個人",
+    "imgURL": "https://raw.githubusercontent.com/sana6622/image-repository/5732ab1823364cbcfa487547c1f420e9a1b131ef/porfolio/demo-91APP1.png",
+    "GitHub Page": "https://sana6622.github.io/demo-91app/",
+    "GitHub": "https://github.com/sana6622/demo-91app",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["HTML", "CSS", "JavaScript", "SCSS"],
+        "des": []
+      },
+      {
+        "subTitle": "其他套件",
+        "skill": ["Swiper", "AOS"],
+        "des": [
+          "Swiper作輪播功能，提供靈活的觸控滑動功能，增強用戶界面的動態展示。",
+          "通過 AOS（Animate On Scroll）套件，我為網站添加了引人注目的視差滾動效果，進一步提升了用戶體驗和視覺吸引力。"
+        ]
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "本專案是對「91APP」官網首頁的部分區域進行模仿復刻。在沒有原始設計稿的情況下，我分析了官網的結構和設計元素，從零開始進行手刻切版，以達到與原網頁相近的視覺效果。通過使用 JavaScript製作了互動功能，也使用 SASS 進行 CSS 管理，讓樣式的開發更加模組化和可維護。我還實現了響應式網頁設計（RWD），確保這個網頁在不同設備和屏幕尺寸上都能提供良好的瀏覽體驗。"
+        ]
+      },
+      {
+        "subTitle": "更動",
+        "des": [
+          "另外，我在此專案中放入自己的優化發想，加入動態效果，使得頁面更加生動活潑。"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "subTitle": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": 202207001,
+    "title": "Harry Potter 記憶翻牌遊戲",
+    "time": "2022/07",
+    "category": "小作品",
+    "type": "個人",
+    "imgURL": "https://github.com/sana6622/image-repository/blob/main/porfolio/Harry%20Potter.png?raw=true",
+    "GitHub Page": "https://sana6622.github.io/Harry-Potter-Poker-Game/",
+    "GitHub": "https://github.com/sana6622/Harry-Potter-Poker-Game",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["HTML", "CSS", "JavaScript"],
+        "des": []
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "本專案是一個翻牌記憶遊戲，玩家的目標是使用最少次數找出相同數字進行配對。這款小遊戲完全使用 HTML、CSS 和 JavaScript 開發。每次遊戲開始時，撲克牌會隨機洗牌，保證每一輪遊戲的挑戰性和趣味性。玩家點擊兩張牌進行翻開，如果翻開的牌匹配，它們會保持翻開狀態；如果不匹配，牌會重新翻回背面，要求玩家記住每張牌的位置和花色，以便找出所有的配對。"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "subTitle": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": 202206001,
+    "title": "chatTalker",
+    "time": "2022/06",
+    "category": "切版",
+    "type": "個人",
+    "imgURL": "https://github.com/sana6622/image-repository/blob/main/porfolio/chatTalker.png?raw=true",
+    "GitHub Page": " https://sana6622.github.io/sixtasktwo/",
+    "GitHub": "https://github.com/sana6622/sixtasktwo",
+    "CodePan": "",
+    "skills": [
+      {
+        "subTitle": "使用工具",
+        "skill": ["HTML", "CSS", "JavaScript", "SCSS", "jQuery"],
+        "des": []
+      }
+    ],
+
+    "contents": [
+      {
+        "subTitle": "簡介",
+        "des": [
+          "依據UI設計稿，從零開始手刻RWD網頁，搭配jQuery及JavaScript，製作互動功能，並使用SCSS為CSS預處理器"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "subTitle": "",
+        "link": ""
+      }
+    ]
+  }
+]

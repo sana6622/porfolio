@@ -195,14 +195,12 @@ export default {
       this.idIndex = Number(this.projectData.findIndex(item => item.id === this.id))
     },
     clickPrev () {
-      console.log('00 index', this.idIndex, typeof (this.idIndex))
       if (this.idIndex > 0) {
         this.idIndex--
         this.changePage(this.idIndex)
       }
     },
     clickNext () {
-      console.log('00 index', this.idIndex, typeof (this.idIndex))
       if (this.idIndex < this.projectData.length - 1) {
         this.idIndex++
         this.changePage(this.idIndex)

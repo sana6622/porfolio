@@ -1,32 +1,8 @@
 <template>
   <div id="home">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <RouterLink to="/about">About</RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/">Home</RouterLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="particles">
+    <NavbarComponent></NavbarComponent>
+
+    <div class="particles ">
       <vue-particles
         id="tsparticles"
         class="tsparticles"
@@ -120,11 +96,18 @@
             </div>
             <div class="card-contents">
               <div class="card-header">
-                <h5>{{ project.title }}</h5>
+                <h4>{{ project.title }}</h4>
                 <span>{{ project.time }}</span>
               </div>
-              <p>1231231231231231231231231231231231</p>
+              <div class="card-des">
+                <p>{{project.contents[0].des[0]}}</p>
+              </div>
+
             </div>
+            <div class="card-button">
+                  <a :href=project.GitHubPage target="_blank" class="btn btn-outline-primary" type="button"> GitHub</a>
+                  <router-link :to="`/project/${project.id}`" class="btn btn-warning">詳情</router-link>
+              </div>
           </li>
         </ul>
       </div>
@@ -133,7 +116,7 @@
 </template>
 
 <script>
-// import { loadFull } from 'tsparticles'
+import NavbarComponent from '../components/NavbarComponent.vue'
 import experience from '../config/experience.json'
 import skillData from '../config/skill.json'
 import projectData from '../config/project.json'
@@ -141,6 +124,7 @@ import { RiBuilding4Fill, RiBriefcase4Line } from '@remixicon/vue'
 
 export default {
   components: {
+    NavbarComponent,
     RiBuilding4Fill,
     RiBriefcase4Line
   },
@@ -226,12 +210,8 @@ export default {
     }
   },
   mounted () {
-    // const particlesInit = async (engine) => {
-    //   await loadFull(engine)
-    // }
-    // const particlesLoaded = async (container) => {
-    //   console.log('particles contaainer loaded', container)
-    // }
+  },
+  methods: {
   }
 }
 </script>

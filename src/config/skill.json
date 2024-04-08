@@ -1,6 +1,6 @@
 [
   {
-    "title": "Front-End",
+    "title": "Front End",
     "familiar": "",
     "skills": ["Vue2", "Vue3", "Pinia", "TypeScript", "Bootstrap", "SCSS"],
     "des": [
@@ -18,7 +18,7 @@
     "des": ["使用Git進行版本控制", "多人協作開發經驗"]
   },
   {
-    "title": "Back-End",
+    "title": "Back End",
     "familiar": "初學",
     "skills": ["Node.js", "Java Spring"],
     "des": ["使用Node.js 和 Java Spring 進行RESTful API開發"]

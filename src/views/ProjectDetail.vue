@@ -25,7 +25,7 @@
         <div class="project-info">
           <div class="info-list">
             <p class="list-title">作品類型:</p>
-            <p class="list-describe">{{ data.type }}{{ data.category }}</p>
+            <p class="list-describe">{{ data.category=="專案"?data.type:'' }}{{ data.category }}</p>
           </div>
 
           <div class="info-list">

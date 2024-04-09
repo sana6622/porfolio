@@ -15,7 +15,7 @@
       </div>
       <div class="main-project">
         <div class="project-img">
-          <img :src="data.imgURL" alt="專案圖片" />
+          <img :src="data.imgURL" alt="專案圖片" data-aos="flip-up" data-aos-duration="2000"/>
           <div class="button-area">
             <a :href=data.GitHubPage target="_blank" class="btn btn-outline-primary btn-lg" type="button"> GitHub Page</a>
             <a :href=data.GitHub target="_blank" class="btn btn-outline-primary btn-lg" type="button"> GitHub</a>
@@ -24,12 +24,12 @@
 
         <div class="project-info">
           <div class="info-list">
-            <p class="list-title">作品類型:</p>
+            <p class="list-title">作品類型：</p>
             <p class="list-describe">{{ data.category=="專案"?data.type:'' }}{{ data.category }}</p>
           </div>
 
           <div class="info-list">
-            <p class="list-title">製作時間:</p>
+            <p class="list-title">製作時間：</p>
             <p class="list-describe">{{ data.time }}</p>
           </div>
 
@@ -38,7 +38,7 @@
             v-for="(skill, indexSkill) in data?.skills"
             :key="`skill-${indexSkill}`"
           >
-            <p class="list-title">{{ skill.subTitle }}:</p>
+            <p class="list-title">{{ skill.subTitle }}：</p>
             <div class="list-describe">
               <ul>
                 <li
@@ -65,7 +65,7 @@
         <ul>
             <li class="content-list" v-for="(content, contentIndex) in data.contents"
                   :key="`content-${contentIndex}`">
-                  {{ content.subTitle }}:
+                  {{ content.subTitle }}：
                   <ul class="list-des" :class="{'indentation':content.des.length>1}">
                     <li v-for="(des, desIndex) in content.des"
                   :key="`content-${desIndex}`">
@@ -76,10 +76,10 @@
             </li>
         </ul>
         <div class="content-design" v-if="data.design">
-            <p>圖稿: </p>
+            <p>圖稿：</p>
             <ul>
-            <li  v-for="(other, oIndex) in data.design" :key="`other-${oIndex}`">
-                <a  :href=other.link target="_blank">{{ other.subTitle }}  </a>
+            <li v-for="(other, oIndex) in data.design" :key="`other-${oIndex}`">
+                <a :href=other.link target="_blank">{{ other.subTitle }}  </a>
            </li>
         </ul>
 

@@ -14,18 +14,19 @@
         "subTitle": "使用工具",
         "skill": ["Vue3", "Vite", "Bootstrap", "SCSS"],
         "des": [
-          "利用 Vue 3 搭配 Vite 進行前端開發",
-          "採用SCSS預處理器",
-          "搭配使用Bootstrap 開發"
+          "利用 Vue 3 搭配 Vite 進行前端開發。",
+          "採用SCSS預處理器。",
+          "搭配使用Bootstrap 開發。"
         ]
       },
       {
         "subTitle": "其他套件",
-        "skill": ["SweetAlert", "REMIX ICON", "tsParticles"],
+        "skill": ["SweetAlert", "REMIX ICON", "tsParticles", "AOS"],
         "des": [
           "使用SweetAlert進行美觀的彈窗提醒和確認消息，提升用戶互動體驗，使應用的提示和警告更加直觀和用戶友好。",
-          "使用REMIX ICON圖標套件，引入Icon",
-          "使用tsParticles實現複雜的粒子效果，用於畫面背景以增強網頁的視覺效果。"
+          "使用REMIX ICON圖標套件，引入Icon。",
+          "使用tsParticles實現複雜的粒子效果，用於畫面背景以增強網頁的視覺效果。",
+          "AOS (Animate On Scroll Library) 技術，為訪客帶來流暢且引人入勝的滾動動畫效果。"
         ]
       }
     ],
@@ -77,12 +78,13 @@
       },
       {
         "subTitle": "其他套件",
-        "skill": ["SweetAlert", "Swiper", "REMIX ICON", "tsParticles"],
+        "skill": ["SweetAlert", "Swiper", "REMIX ICON", "tsParticles", "AOS"],
         "des": [
           "使用SweetAlert進行美觀的彈窗提醒和確認消息，提升用戶互動體驗，使應用的提示和警告更加直觀和用戶友好。",
           "Swiper作輪播功能，提供靈活的觸控滑動功能，增強用戶界面的動態展示。",
           "使用REMIX ICON圖標套件，引入Icon",
-          "使用tsParticles實現複雜的粒子效果，用於登入畫面背景，以增強網頁的視覺效果。"
+          "使用tsParticles實現複雜的粒子效果，用於登入畫面背景，以增強網頁的視覺效果。",
+          "AOS (Animate On Scroll Library) 技術，為訪客帶來流暢且引人入勝的滾動動畫效果。"
         ]
       }
     ],

@@ -79,6 +79,11 @@
         z-index: 2;
         margin-bottom: 40px;
 
+        .exp-list {
+            margin: 0;
+            padding: 0;
+        }
+
         .exp-data {
             background-color: #fff;
             box-shadow: -3px 2px 14px -6px rgba(0, 0, 0, 0.5);

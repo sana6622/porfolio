@@ -2,7 +2,7 @@
   <div id="home">
     <NavbarComponent></NavbarComponent>
 
-    <div class="particles ">
+    <div class="particles">
       <vue-particles
         id="tsparticles"
         class="tsparticles"
@@ -13,8 +13,10 @@
     <div class="banner">
       <div class="banner-text">
         <h1>前端工程師-許雅棠</h1>
-        <h2>在代碼的世界裡不斷成長，追求技術上的卓越。</h2>
-        <h2>我的旅程才剛開始，一起來探索更多可能！</h2>
+        <h2 data-aos="zoom-out-down">
+          在代碼的世界裡不斷成長，追求技術上的卓越。
+        </h2>
+        <h2 data-aos="zoom-out-down">我的旅程才剛開始，一起來探索更多可能！</h2>
       </div>
     </div>
     <!--end of banner-->
@@ -26,6 +28,7 @@
             class="exp-data"
             v-for="(item, index) in expData"
             :key="`exp-${index}`"
+            data-aos="flip-down" data-aos-duration="1800"
           >
             <div class="data-time">
               <p>{{ item.start }}</p>
@@ -63,6 +66,8 @@
               class="list-card"
               v-for="(skillItem, skillIndex) in skillData"
               :key="`skillItem-${skillIndex}`"
+              data-aos="zoom-in-down"
+              data-aos-duration="1500"
             >
               <h4>
                 {{ skillItem.title }} <span>{{ skillItem?.familiar }}</span>
@@ -90,7 +95,13 @@
       <div class="main-project text-container">
         <h3>作品集</h3>
         <ul>
-          <li class="card" v-for="project in projectData" :key="project.id">
+          <li
+            class="card"
+            v-for="project in projectData"
+            :key="project.id"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <div class="card-img">
               <img :src="project.imgURL" :alt="`${project.title}-圖片`" />
             </div>
@@ -100,14 +111,24 @@
                 <span>{{ project.time }}</span>
               </div>
               <div class="card-des">
-                <p>{{project.contents[0].des[0]}}</p>
+                <p>{{ project.contents[0].des[0] }}</p>
               </div>
-
             </div>
             <div class="card-button">
-                  <a :href=project.GitHubPage target="_blank" class="btn btn-outline-primary" type="button"> GitHub</a>
-                  <router-link :to="`/project/${project.id}`" class="btn btn-warning">詳情</router-link>
-              </div>
+              <a
+                :href="project.GitHubPage"
+                target="_blank"
+                class="btn btn-outline-primary"
+                type="button"
+              >
+                GitHub</a
+              >
+              <router-link
+                :to="`/project/${project.id}`"
+                class="btn btn-warning"
+                >詳情</router-link
+              >
+            </div>
           </li>
         </ul>
       </div>
@@ -209,10 +230,8 @@ export default {
       projectData
     }
   },
-  mounted () {
-  },
-  methods: {
-  }
+  mounted () {},
+  methods: {}
 }
 </script>
 
